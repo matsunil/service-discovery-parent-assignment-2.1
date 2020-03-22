@@ -64,6 +64,11 @@ public class AssetServiceController {
         return assetService.getAsset(organizationId,assetId, clientType);
     }
 
+	/**
+	 * POST asset for organization by organization id
+	 * Using @PathVariable organizationId
+	 * Using @RequestBody asset
+	 */
     @RequestMapping(value="/",method = RequestMethod.POST)
     public void saveAssets(@PathVariable("organizationId") String organizationId, 
 			@RequestBody Asset asset) {
